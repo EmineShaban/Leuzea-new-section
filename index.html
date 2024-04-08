@@ -314,8 +314,57 @@
 
 
 
-
-
+            <div class="container">
+                         <div class="additional-product tribulus in-stock-addon-1">
+        
+           
+                <?php $product = getProduct(236,0); ?>
+                <input type="checkbox" id="addon_tribulus" name="addon_tribulus" class="addonBox" data-cart-position=1 data-cart-toggle=1 data-optional=1 <?php echo $product['meta'] ?> />
+                            <div class="box">
+                                <div class="inner">
+                       <div class="product-img">
+                                    <img src="/cdn/leuzea/inc/assets-general/order/test/bottle-tribulus.png" alt="">
+                        <p class="ml"><?php echo $LANG['qty_ml'] ?></p>
+                                    <p class="price"><?php echo $product['prices']['info_disc_pr'] ?> <?php echo $LANG['billing_currency_local'] ?></p>
+                       </div>
+                                    <div class="box-content">
+                                         <?php echo $LANG['tribulus_benefits_order'] ?>
+        
+                                          <div class="product-descr">
+                                            <div class="quantity-form">
+                            <div>
+                                                    <label for='quantity'> <?php echo $LANG['quantity'] ?>:</label>
+                                                    <select name="quantity" id="quantity" class="qty" onchange="FA_selectQuantity(this)">
+                                                        <option value='1'><?php echo $LANG['tribulus_quantity_1'] ?></option>
+                                                        <option value='2'><?php echo $LANG['tribulus_quantity_2'] ?></option>
+                                                        <option value='3'><?php echo $LANG['tribulus_quantity_3'] ?></option>
+                                                        <option value='4'><?php echo $LANG['tribulus_quantity_4'] ?></option>
+                                                        <option value='5'><?php echo $LANG['tribulus_quantity_5'] ?></option>
+                                                    </select>
+                            </div>
+                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                     </div>
+                    <label for="addon_tribulus" class="">
+                       <div class="order-btn">
+                         <div class="add-to-cart tribulus"> <?php echo $LANG['add_to_cart'] ?></div>
+                         <div class="remove-from-cart tribulus"> <?php echo $LANG['remove_from_cart'] ?></div>
+                          </div>
+                    </label>
+                           
+                    <script>
+                        function FA_selectQuantity(el) {
+                         console.log(el);
+                         $($(el).closest('.additional-product').find('input')[0]).attr('data-quantity-select',
+                         el.value);
+                             }
+                     </script>
+                </div>
+                        </div>
+            
+        
 
 
 
@@ -324,47 +373,28 @@
 
                 <div class="additional-product tribulus in-stock-addon-1">
 
-                    <h1 class="additional-prd-title"> MAKSImeeri oma tulemusi kiiremini. <br>
-                        <span>Kombineeri võimsa tеstоstеrооni tõstjat ja sportlaste jaoks hädavajalikke mineraalaineid.
-                        </span>
-                    </h1>
+
                     <input type="checkbox" id="addon_tribulus" name="addon_tribulus" class="addonBox"
                         data-cart-position=1 data-cart-toggle=1 data-optional=1 data-price='29.9' data-quantity='1'
                         data-full-price='29.9' data-discount='0' data-product-name='Tribulus MAX' data-cart-position='0'
-                        data-product-id='54' />
+                        data-product-id='236' />
                     <div class="box">
                         <div class="inner">
                             <div class="product-img">
-                                <img src="https://lesthe.com/cdn/leuzea/inc/assets-general/order/test/bottle-tribulus.png"
+                                <img src="https://lesthe.com/cdn/leuzea/inc/assets-general/order/images/bundle3x.png"
                                     alt="">
                                 <p class="ml">100ml</p>
                                 <p class="price">29.9 €</p>
                             </div>
                             <div class="box-content">
-                                <!-- <h3>  <h2>Tribulus MAX:</h2>
-  <p>Maksimaalne ekstrakti kontsentratsioon vaid 1 annuses kutsub esile testosterooni taseme kiirendatud tõusu.</p></h3>-->
-                                <h3>Tribulus MAX</h3>
+                                <h2>Max Power Stack</h2>
+                                <p>1x LeuzeaMax + 1x Tribulus MAX + 1x Siberian Ginseng</p>
                                 <ul>
-                                    <li>Võimas tеstоstеrооni tõstja</li>
-                                    <li>Lihaskasvu nähtav suurenemine</li>
-                                    <li>Oluliselt kiirem taastumine</li>
-                                    <li>Kuni 30% rasva ladestumise vähendamine</li>
+                                    <li>Sculpt your dream physique with enhanced T-levels </li>
+                                    <li> Boost strength and stamina for peak performance</li>
+                                    <li> Accelerate recovery to reduce post-workout fatigue</li>
                                 </ul>
-                                <div class="product-descr">
-                                    <div class="quantity-form">
-                                        <div>
-                                            <label for='quantity'> Kogus:</label>
-                                            <select name="quantity" id="quantity" class="qty"
-                                                onchange="FA_selectQuantity(this)">
-                                                <option value='1'>1 x 29.9€</option>
-                                                <option value='2'>2 x 26.9€</option>
-                                                <option value='3'>3 x 23.9€</option>
-                                                <option value='4'>4 x 20.9€</option>
-                                                <option value='5'>5 x 17.9€</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
+                   
                             </div>
                         </div>
                     </div>
